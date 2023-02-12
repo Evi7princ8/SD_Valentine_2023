@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,600&family=Xanh+Mono:ital@0;1&display=swap");
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(
+    45deg,
+    lightblue,
+    purple,
+    yellow,
+    skyblue,
+    orange,
+    aqua,
+    black
+  );
+  background-size: 300% 300%;
+  animation: color 12s ease-in-out infinite;
+}
+#msg {
+  text-align: center;
+  justify-content: center;
+}
+
+@keyframes color {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#buttons {
+  height: 2rem;
+  width: 50%;
+  border-radius: 15px;
+}
+#yes {
+  color: black;
+  background: yellow;
+}
+#no {
+  color: black;
+  background: greenyellow;
+}
+#msg {
+  color: red;
+}
+
+#buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  margin-top: 20px;
+}
+
+#message {
+  font-size: 24px;
+  margin-top: 20px;
+  display: none;
+}
+
+.heart {
+  width: 7rem;
+  height: 7rem;
+  justify-content: flex-end;
+  background-color: #ee0f0f;
+  position: relative;
+  transform: rotate(45deg);
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072);
+  animation: pluse 1s linear infinite;
+}
+
+.heart:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #ee0f0f;
+  position: absolute;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.heart:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #ee0f0f;
+  position: absolute;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes pluse {
+  0% {
+    transform: rotate(45deg) scale(1);
+  }
+  20% {
+    transform: rotate(45deg) scale(1);
+  }
+  40% {
+    transform: rotate(45deg) scale(1.4);
+  }
+  60% {
+    transform: rotate(45deg) scale(1.2);
+  }
+  80% {
+    transform: rotate(45deg) scale(1.4);
+  }
+  100% {
+    transform: rotate(45deg) scale(1);
+  }
+}
+
+p {
+  /* height: 100%; */
+  width: 100%;
+  font-size: 21px;
+  text-align: center;
+  justify-content: center;
+  padding-right: 50px;
+  animation: beats 1s ease-in infinite;
+}
+
+@keyframes beats {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.4);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  80% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#imgs {
+  display: none;
+  height: 30rem;
+  width: 30rem;
+}
+/*  */
+
+@media screen and (max-width: 600px) {
+  .heart {
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  p {
+    font-size: 13px;
+  }
+  #imgs {
+    height: 15rem;
+    width: 15rem;
+  }
+}

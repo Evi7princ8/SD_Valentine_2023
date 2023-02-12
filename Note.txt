@@ -1,0 +1,24 @@
+yesButton.addEventListener("click", () => {
+  buttons.style.display = "none";
+  document.body.style.background = "Yellow";
+  message.innerHTML = `<div class="heart"></div>
+  <p>Thanks for being my Valentine!, I love you too 😳👉👈</p>`;
+  message.style.display = "block";
+  imgsr.style.display = "grid";
+  msgbtn = document.querySelector("#msg").style.display = "none";
+  song.play();
+});
+
+yesButton.addEventListener("click", () => {
+  song.play();
+});
+
+
+*. After everything i want to add music but unable to do it because im adding it in the same event where
+    all my css and on click events are happening we cant do that
+*. so we created another event and gave our music stuff.
+
+*. this one,
+    yesButton.addEventListener("click", () => {
+  song.play();
+});
