@@ -161,15 +161,15 @@ p {
 
 @media screen and (max-width: 600px) {
   .heart {
-    height: 5rem;
-    width: 5rem;
+    height: 3rem;
+    width: 3rem;
     display: flex;
     justify-content: center;
     text-align: center;
   }
 
   p {
-    font-size: 13px;
+    font-size: 11px;
   }
   #imgs {
     height: 15rem;
